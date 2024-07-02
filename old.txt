@@ -1,0 +1,146 @@
+// // menu window that is fixed to the left side of the screen
+//         ImGui::SetNextWindowPos(ImVec2(0, 0));
+//         ImGui::SetNextWindowSize(ImVec2(200, 720));
+//         ImGui::Begin("Menu", NULL, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);
+
+//         // button to toggle the CPU state and a label to display the state
+//         if (ImGui::Button("CPU")) {
+//             cpu_state = !cpu_state;
+//             gpu_state = false;
+//             init_state = false;
+//         }
+//         ImGui::SameLine();
+//         ImGui::Text("CPU: %s", cpu_state ? "TRUE" : "FALSE");
+
+//         // button to toggle the GPU state
+//         if (ImGui::Button("GPU")) {
+//             gpu_state = !gpu_state;
+//             cpu_state = false;
+//             init_state = false;
+//         }
+//         ImGui::SameLine();
+//         ImGui::Text("GPU: %s", gpu_state ? "TRUE" : "FALSE");
+
+//         // button to toggle the init state
+//         if (ImGui::Button("Init")) {
+//             init_state = !init_state;
+//             cpu_state = false;
+//             gpu_state = false;
+//         }
+//         ImGui::SameLine();
+//         ImGui::Text("Init: %s", init_state ? "TRUE" : "FALSE");
+
+//         if (init_state) {
+//                 // button to clear the grid
+//                 if (ImGui::Button("Clear")) {
+//                     grid.clear();
+//                 }
+
+//                 // button to randomize the grid
+//                 if (ImGui::Button("Randomize")) {
+//                     grid.randomize();
+//                 }
+//                 ImGui::SameLine();
+//                 ImGui::Text("Density: ");
+//                 static float density = 0.211f;
+//                 ImGui::SliderFloat("Density", &density, 0.0f, 1.0f);
+//                 static int seed = 1;
+//                 ImGui::InputInt("Seed", &seed);
+//                 if (ImGui::Button("Randomize with Seed")) {
+//                     grid.randomize(seed, density);
+//                 }
+//         }
+
+//         // test button to compare the CPU and GPU implementations
+//         if (ImGui::Button("Test")) {
+//             // create a random state
+//             vector<vector<bool>> state;
+//             for (int i = 0; i < 128; i++) {
+//                 vector<bool> row;
+//                 for (int j = 0; j < 72; j++) {
+//                     row.push_back(rand() % 2);
+//                 }
+//                 state.push_back(row);
+//             }
+
+//             // create a grid with the random state
+//             Grid grid_cpu(128, 72, state);
+//             Grid grid_gpu(128, 72, state);
+
+//             grid_cpu.randomize(1, 0.211);
+//             grid_gpu.randomize(1, 0.211);
+
+//             // update the grid using the CPU
+//             for (int i = 0; i < 1; i++) {
+//                 // compare the states of the grids
+//                 bool match = true;
+//                 for (int k = 0; k < 128; k++) {
+//                     for (int j = 0; j < 72; j++) {
+//                         if (grid_cpu.isCellAlive(k, j) != grid_gpu.isCellAlive(k, j)) {
+//                             match = false;
+//                             // print no match
+//                             cout << "No Match: " << k << " " << j << endl;
+//                             break;
+//                         }
+//                         cout << "Match: " << k << " " << j << endl;
+//                     }
+//                     if (!match) {
+//                         break;
+//                     }
+//                 }
+
+//                 if (!match) {
+//                     break;
+//                 }
+
+//                 // print match indexes
+//                 cout << "Match: " << i << endl;
+
+//                 grid_cpu.update();
+//                 grid_gpu.updateGPU();
+//             }
+//         }
+
+//         // end the menu window
+//         ImGui::End();
+
+//         // window for the game of life that fills the screen
+//         ImGui::SetNextWindowPos(ImVec2(200, 0));
+//         ImGui::SetNextWindowSize(ImVec2(1080, 720));
+//         ImGui::Begin("Game of Life", NULL, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse);
+
+//         // if init state is true, allow the user to set the initial state of the grid
+//         if (init_state) {
+//             // draw the grid
+//             grid.draw();
+
+//             // if the user clicks on a cell, toggle its state
+//             if (ImGui::IsMouseClicked(0)) {
+//                 ImVec2 mousePos = ImGui::GetMousePos();
+//                 int x = mousePos.x / 10;
+//                 int y = mousePos.y / 10;
+//                 grid.setCellAlive(x, y, !grid.isCellAlive(x, y));
+//             }
+
+//             // if mouse hovers over a cell, highlight it
+//             if (ImGui::IsMouseHoveringRect(ImVec2(200, 0), ImVec2(1280, 720))) {
+//                 ImVec2 mousePos = ImGui::GetMousePos();
+//                 int x = mousePos.x / 10;
+//                 int y = mousePos.y / 10;
+//                 ImGui::GetWindowDrawList()->AddRectFilled(ImVec2(x * 10, y * 10), ImVec2(x * 10 + 10, y * 10 + 10), IM_COL32(0, 0, 255, 255));
+//             }
+//         }
+
+//         // if CPU state is true, update the grid using the CPU
+//         if (cpu_state && !init_state && !gpu_state) {
+//             grid.update();
+//             grid.draw();
+//         }
+
+//         // GPU state to be implemented
+//         if (gpu_state && !init_state && !cpu_state) {
+//             grid.updateGPU();
+//             grid.draw();
+//         }
+
+//         ImGui::End();

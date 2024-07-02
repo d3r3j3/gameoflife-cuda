@@ -1,0 +1,10 @@
+^C:\USERS\DEREJ\ONEDRIVE\DESKTOP\ACLASS\CS179\CLONE\CS179\GAMEOFLIFE\GLFW\SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife -BC:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build --check-stamp-file C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/glfw/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

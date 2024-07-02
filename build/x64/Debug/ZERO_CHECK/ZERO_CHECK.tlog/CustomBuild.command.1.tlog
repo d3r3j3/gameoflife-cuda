@@ -1,0 +1,10 @@
+^C:\USERS\DEREJ\ONEDRIVE\DESKTOP\ACLASS\CS179\CLONE\CS179\GAMEOFLIFE\BUILD\CMAKEFILES\D5387CD3BF0C71B292A2B528B1056665\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife -BC:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/GameOfLife.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

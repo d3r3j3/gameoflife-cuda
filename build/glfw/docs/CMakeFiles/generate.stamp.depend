@@ -1,0 +1,6 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.29/Modules/FindDoxygen.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.29/Modules/FindPackageMessage.cmake
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/glfw/docs/CMakeLists.txt
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/glfw/docs/Doxyfile.in

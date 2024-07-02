@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\derej\OneDrive\Desktop\ACLASS\CS179\clone\cs179\gameoflife\objects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\derej\OneDrive\Desktop\ACLASS\CS179\clone\cs179\gameoflife\windows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\derej\OneDrive\Desktop\ACLASS\CS179\clone\cs179\gameoflife\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\derej\OneDrive\Desktop\ACLASS\CS179\clone\cs179\gameoflife\objects.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\derej\OneDrive\Desktop\ACLASS\CS179\clone\cs179\gameoflife\windows.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\gpu.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\derej\OneDrive\Desktop\ACLASS\CS179\clone\cs179\gameoflife\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\derej\OneDrive\Desktop\ACLASS\CS179\clone\cs179\gameoflife\gpu.cuh" />
+    <None Include="C:\Users\derej\OneDrive\Desktop\ACLASS\CS179\clone\cs179\gameoflife\cuda_header.cuh" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A2D24B62-2500-3DF3-AC9D-236D4F8560F6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{ED2B619D-8F5F-39CB-8194-01922845EFF7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

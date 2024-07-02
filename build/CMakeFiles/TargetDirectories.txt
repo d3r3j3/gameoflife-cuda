@@ -1,0 +1,15 @@
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/CMakeFiles/GameOfLife.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/CMakeFiles/INSTALL.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/glfw/CMakeFiles/uninstall.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/glfw/CMakeFiles/INSTALL.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/glfw/CMakeFiles/ALL_BUILD.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/glfw/src/CMakeFiles/glfw.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/glfw/src/CMakeFiles/update_mappings.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/glfw/src/CMakeFiles/INSTALL.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/glfw/docs/CMakeFiles/docs.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/glfw/docs/CMakeFiles/INSTALL.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/imgui/CMakeFiles/imgui.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/imgui/CMakeFiles/INSTALL.dir
+C:/Users/derej/OneDrive/Desktop/ACLASS/CS179/clone/cs179/gameoflife/build/imgui/CMakeFiles/ALL_BUILD.dir
